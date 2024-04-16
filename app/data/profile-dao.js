@@ -12,6 +12,8 @@ function ProfileDAO(db) {
 
     const users = db.collection("users");
 
+    const password = '1234567234523test';
+
     /* Fix for A6 - Sensitive Data Exposure
 
     // Use crypto module to save sensitive data such as ssn, dob in encrypted format
