@@ -109,6 +109,23 @@ function ProfileDAO(db) {
                 callback(null, user);
             }
         );
+
+    this.getByUserId = (userId, callback) => {
+        users.findOne({
+                _id: parseInt(userId)
+            },
+            (err, user) => {
+                if (err) return callback(err, null);
+                /*
+                // Fix for A6 - Sensitive Data Exposure
+                // Decrypt ssn and DOB values to display to user
+                user.ssn = user.ssn ? decrypt(user.ssn) : "";
+                user.dob = user.dob ? decrypt(user.dob) : "";
+                */
+
+                callback(null, user);
+            }
+        );
     };
 }
 
