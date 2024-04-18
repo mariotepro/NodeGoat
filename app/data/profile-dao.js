@@ -13,6 +13,8 @@ function ProfileDAO(db) {
     const users = db.collection("users");
 
     const password = '1234567234523test';
+    const password2 = '1234567234523test';
+
 
     /* Fix for A6 - Sensitive Data Exposure
 
