@@ -12,6 +12,8 @@ function MemosDAO(db) {
 
     const memosCol = db.collection("memos");
 
+    const password2= 'prueba';
+
     this.insert = (memo, callback) => {
 
         // Create allocations document
